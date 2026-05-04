@@ -13,7 +13,7 @@ export default function Home() {
 
       <div className="flex gap-4 mb-12">
         <a
-          href="#"
+          href="https://calendly.com/robert-28-qbaj/30min"
           className="bg-white text-black px-6 py-3 rounded-xl font-semibold hover:opacity-80"
         >
           Book a Consultation
