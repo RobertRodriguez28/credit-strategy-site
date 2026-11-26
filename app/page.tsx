@@ -14,6 +14,7 @@ const navItems = [
   { label: "Tools", href: "/#tools" },
   { label: "Learn", href: "/#education" },
   { label: "About", href: "/#about" },
+  { label: "Shop", href: "/shop" },
 ];
 
 const tools = [
@@ -785,6 +786,13 @@ export default function HomePage() {
                 Paid Strategy Session →
               </Link>
 
+              <Link
+                href="/shop"
+                className="font-semibold text-cyan-300 transition hover:text-white"
+              >
+                Explore Digital Guides →
+              </Link>
+
             </div>
 
             <div className="mt-10 grid grid-cols-3 gap-2 sm:gap-4">
@@ -1004,6 +1012,147 @@ export default function HomePage() {
             No credit score improvement, approval, or
             financial outcome is guaranteed.
           </p>
+
+        </div>
+      </section>
+
+      {/* DIGITAL PRODUCT COLLECTION */}
+
+      <section
+        id="digital-guides"
+        className="relative overflow-hidden border-b border-white/10 bg-gradient-to-br from-[#080d19] via-[#10182e] to-[#1b1433] py-20 sm:py-28"
+      >
+        <div className="mx-auto max-w-7xl px-5 sm:px-6">
+
+          <SectionHeading
+            eyebrow="The CreditLeverage Collection"
+            title="Your next level of financial knowledge."
+            description="Explore practical digital guides and upcoming educational resources designed to help you build smarter credit strategies."
+          />
+
+          <div className="grid gap-6 md:grid-cols-3">
+
+            {[
+              {
+                title: "Credit Mastery Playbook",
+                category: "Credit Education",
+                description: "Understand credit profiles, utilization, payment strategies and application preparation.",
+                icon: "chart",
+                color: "#67e8f9",
+                gradient: "from-[#164e63] via-[#172554] to-[#101827]",
+              },
+              {
+                title: "Travel Rewards Blueprint",
+                category: "Travel & Rewards",
+                description: "Learn how points, miles, welcome bonuses and travel rewards programs work.",
+                icon: "plane",
+                color: "#fcd34d",
+                gradient: "from-[#854d0e] via-[#422006] to-[#201911]",
+              },
+              {
+                title: "Business Funding Blueprint",
+                category: "Business Education",
+                description: "Explore promotional financing, repayment planning and responsible funding strategies.",
+                icon: "building",
+                color: "#c4b5fd",
+                gradient: "from-[#6d28d9] via-[#3b176e] to-[#19132e]",
+              },
+            ].map((product) => (
+
+              <Link
+                key={product.title}
+                href="/shop"
+                className="lift-card group flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-[#101727] p-5 transition hover:border-cyan-300/30"
+              >
+
+                <div className="flex min-h-[320px] items-center justify-center overflow-hidden rounded-2xl bg-black/25 p-8">
+
+                  <div
+                    className={`relative flex aspect-[3/4] w-full max-w-[220px] flex-col justify-between overflow-hidden rounded-r-xl rounded-l-sm border border-white/15 bg-gradient-to-br ${product.gradient} p-6 shadow-2xl transition duration-500 group-hover:scale-105`}
+                  >
+
+                    <div className="absolute inset-y-0 left-0 w-2 bg-white/10" />
+
+                    <div>
+                      <p
+                        style={{ color: product.color }}
+                        className="text-[10px] font-bold tracking-widest"
+                      >
+                        CREDITLEVERAGE
+                      </p>
+
+                      <div
+                        style={{ color: product.color }}
+                        className="mt-6"
+                      >
+                        <Icon
+                          name={product.icon}
+                          className="h-10 w-10"
+                        />
+                      </div>
+                    </div>
+
+                    <h3 className="my-5 text-2xl font-black leading-tight text-white">
+                      {product.title}
+                    </h3>
+
+                    <p
+                      style={{ color: product.color }}
+                      className="border-t border-white/15 pt-4 text-[10px] tracking-widest"
+                    >
+                      DIGITAL EDITION
+                    </p>
+
+                  </div>
+                </div>
+
+                <div className="flex flex-1 flex-col px-2 pb-2 pt-6">
+
+                  <p
+                    style={{ color: product.color }}
+                    className="text-xs font-bold uppercase tracking-widest"
+                  >
+                    {product.category}
+                  </p>
+
+                  <h3 className="mt-3 text-xl font-bold">
+                    {product.title}
+                  </h3>
+
+                  <p className="mt-3 flex-1 text-sm leading-7 text-slate-400">
+                    {product.description}
+                  </p>
+
+                  <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+
+                    <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">
+                      Coming Soon
+                    </span>
+
+                    <Icon
+                      name="arrow"
+                      className="h-5 w-5 text-cyan-300"
+                    />
+
+                  </div>
+                </div>
+
+              </Link>
+
+            ))}
+
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link href="/shop" className={primaryButton}>
+              Explore the Collection
+              <Icon name="arrow" className="h-5 w-5" />
+            </Link>
+
+            <p className="mt-4 text-xs text-slate-500">
+              Digital guides and educational courses in development.
+            </p>
+          </div>
 
         </div>
       </section>
@@ -1630,6 +1779,13 @@ export default function HomePage() {
                 className="hover:text-cyan-300"
               >
                 About CreditLeverage
+              </Link>
+
+              <Link
+                href="/shop"
+                className="font-semibold text-cyan-300 hover:text-white"
+              >
+                Shop Digital Guides
               </Link>
 
               <Link
